@@ -10,8 +10,9 @@
 <body>
     <h1 id="hi">Hello</h1>
     <script>
-        document.getElementById("hi").textContent="Hello!";
-        d3.select("body").append("p").text("YES D3 WAS DEPLOYED CORRECTLY!")
+        var dataset = [5,10,15,20,25,30];
+        d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return d;})
+
     </script>
 </body>
 </html>
