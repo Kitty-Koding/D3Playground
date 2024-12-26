@@ -10,7 +10,10 @@
 <body>
     <h1 id="hi">Hello</h1>
     <script>
-        var dataset = [25,7,5,26,11,8,25,14,23,19];
+        var dataset = [];
+        for(var i = 0;i < 25; i++){
+            dataset.push(Math.random()*30);
+        }
         d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return d;})
         d3.select("body").selectAll("div").data(dataset).enter().append("div").attr("class","bar").style("height",function(d){return d*5+"px";})
         
