@@ -10,7 +10,7 @@
 <body>
     <h1 id="hi">Hello</h1>
     <script>
-        var dataset = [5,10,15,20,25,30];
+        var dataset = [25,7,5,26,11,8,25,14,23,19];
         d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return d;})
         d3.select("body").selectAll("div").data(dataset).enter().append("div").attr("class","bar").style("height",function(d){return d*5+"px";})
         
