@@ -12,7 +12,7 @@
     <script>
         var dataset = [5,10,15,20,25,30];
         d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return d;})
-
+        d3.select("body").selectAll("div").data(dataset).enter().append("div").attr("class","bar"))
     </script>
 </body>
 </html>
