@@ -14,9 +14,12 @@
         for(var i = 0;i < 25; i++){
             dataset.push(Math.random()*30);
         }
-        d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return d;})
-        d3.select("body").selectAll("div").data(dataset).enter().append("div").attr("class","bar").style("height",function(d){return d*5+"px";})
+        var svg = d3.select("body").append("svg")
+        svg.attr("width",500)
+            .attr("height",50)
         
+        svg.selectAll("rect").data(dataset).enter().append("rect").attr("x",function(d,i){return i*(500/dataset.length)}).attr("y",function(d){return 
+        }).attr("width",20).attr("height",function(d){ return d*4;})
     </script>
 </body>
 </html>
